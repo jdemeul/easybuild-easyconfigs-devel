@@ -10,7 +10,7 @@
 # The Francis Crick Institute
 
 name = 'Bowtie2'
-version = '2.3.2'
+version = '2.2.9'
 
 homepage = 'http://bowtie-bio.sourceforge.net/bowtie2/index.shtml'
 description = """ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads 
@@ -24,8 +24,5 @@ toolchainopts = {'pic': True, 'cstd': 'c++11'}
 
 sources = ['%(namelower)s-%(version)s-source.zip']
 source_urls = [('http://sourceforge.net/projects/bowtie-bio/files/%(namelower)s/%(version)s', 'download')]
-
-# to add script folder to path just uncomment this line
-# modextrapaths = {'PATH': 'scripts'}
 
 moduleclass = 'bio'
