@@ -1,0 +1,31 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Jonas Demeulemeester
+# The Francis Crick Institute
+
+easyblock = 'RPackage'
+
+name = 'Battenberg'
+version = '2.2.6'
+
+homepage = 'https://github.com/Wedge-Oxford/battenberg'
+description = """Battenberg R package for subclonal copynumber estimation"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/Wedge-Oxford/battenberg/archive/']
+sources = ['v%(version)s.tar.gz']
+
+rver = '3.4.1'
+versionsuffix = '-R-%s' % rver
+dependencies = [
+    ('R', rver, '-X11-20160819'),
+    ('ASCAT', '2.5', '-R-3.4.1'),
+    ('IMPUTE2', '2.3.2', '_x86_64_dynamic'),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [name],
+}
+
+moduleclass = 'bio'
