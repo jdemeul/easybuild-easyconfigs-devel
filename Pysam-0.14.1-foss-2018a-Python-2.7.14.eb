@@ -18,7 +18,7 @@ homepage = 'https://github.com/pysam-developers/pysam'
 description = """Pysam is a python module for reading and manipulating Samfiles. 
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix."""
 
-toolchain = {'name': 'intel', 'version': '2018a'}
+toolchain = {'name': 'foss', 'version': '2018a'}
 
 source_urls = ['https://github.com/pysam-developers/pysam/archive/']
 sources = ['v%(version)s.tar.gz']
