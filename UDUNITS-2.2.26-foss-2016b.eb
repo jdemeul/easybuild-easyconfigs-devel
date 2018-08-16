@@ -1,0 +1,65 @@
+# Built with EasyBuild version 3.4.0 on 2018-01-03_11-40-24
+##
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+#
+# Copyright:: Copyright 2012-2013 University of Luxembourg, Ghent University
+# Authors::   Fotis Georgatos <fotis@cern.ch>, Kenneth Hoste (Ghent University)
+# License::   MIT/GPL
+# $Id$
+#
+# This work implements a part of the HPCBIOS project and is a component of the policy:
+# http://hpcbios.readthedocs.org/en/latest/HPCBIOS_2012-97.html
+##
+
+easyblock = 'ConfigureMake'
+
+name = 'UDUNITS'
+version = "2.2.26"
+
+homepage = 'http://www.unidata.ucar.edu/software/udunits/'
+description = """UDUNITS supports conversion of unit specifications between formatted and binary forms,
+ arithmetic manipulation of units, and conversion of values between compatible scales of measurement."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'opt': True, 'pic': True}
+
+sources = [SOURCELOWER_TAR_GZ]
+source_urls = ['ftp://ftp.unidata.ucar.edu/pub/udunits']
+
+dependencies = [('expat', '2.1.1')]
+
+sanity_check_paths = {
+    'files': ['bin/udunits2', 'include/converter.h', 'include/udunits2.h', 'include/udunits.h',
+              'lib/libudunits2.a', 'lib/libudunits2.%s' % SHLIB_EXT],
+    'dirs': ['share'],
+}
+
+parallel = 1
+
+moduleclass = 'phys'
+
+# Build statistics
+buildstats = [{
+    "build_time": 20.28,
+    "command_line": ["--installpath='/srv/sw/eb'", "--repositorypath='/srv/sw/eb/ebfiles/'", "--robot='/srv/sw/eb/ebfiles:/home/centos/easyconfigs:/usr/easybuild/easyconfigs'", "--robot-paths='/srv/sw/eb/ebfiles:/home/centos/easyconfigs:'", "--try-software-version='2.2.26'", "--try-toolchain='foss,2016b'", 'UDUNITS-2.2.20-foss-2016a.eb'],
+    "core_count": 20,
+    "cpu_model": "Intel Xeon E3-12xx v2 (Ivy Bridge)",
+    "cpu_speed": 2399.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.4.0",
+    "easybuild-framework_version": "3.4.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/srv/sw/eb/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/srv/sw/eb/software/GCCcore/5.4.0 --with-local-prefix=/srv/sw/eb/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/home/centos/.local/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.17",
+    "hostname": "vanloo-main.novalocal",
+    "install_size": 1223378,
+    "modules_tool": ('Lmod', '/usr/share/lmod/lmod/libexec/lmod', '6.5.1'),
+    "os_name": "centos linux",
+    "os_type": "Linux",
+    "os_version": "7.4.1708",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.5 (default, Aug  4 2017, 00:39:18) ; [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]",
+    "system_gcc_path": "/srv/sw/eb/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/bin/python",
+    "timestamp": 1514979624,
+    "total_memory": 402932,
+}]

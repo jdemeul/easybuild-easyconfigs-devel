@@ -1,11 +1,15 @@
-# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
 # Author: Jonas Demeulemeester
-# The Francis Crick Institute
+# The Francis Crick Institute, London, UK
+##
+
 
 easyblock = 'Tarball'
 
 name = 'PennCNV-Affy'
-version = '2009Aug27'
+version = '2014May07'
 
 homepage = 'http://penncnv.openbioinformatics.org/en/latest/'
 
@@ -19,11 +23,9 @@ toolchain = {'name': 'dummy', 'version': 'dummy'}
 source_urls = ['http://www.openbioinformatics.org/penncnv/download/']
 sources = ['gw6.tar.gz']
 
-install_cmd = 'cd gw6 && cp * %(installdir)s'
-
 sanity_check_paths = {
-    'files': ["bin/generate_affy_geno_cluster.pl"],
-    'dirs': [],
+    'files': ["bin/generate_affy_geno_cluster.pl", "bin/normalize_affy_geno_cluster.pl"],
+    'dirs': ["lib", "lib500k", "libgw5"],
 }
 
 moduleclass = 'bio'

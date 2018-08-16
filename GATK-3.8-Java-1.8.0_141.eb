@@ -1,7 +1,11 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+# Author: Jonas Demeulemeester
+# The Francis Crick Institute
+
 name = 'GATK'
 version = '3.8'
 versionsuffix = '-Java-%(javaver)s'
-easyblock = 'JAR'
+easyblock = 'Tarball'
 
 homepage = 'http://www.broadinstitute.org/gatk/'
 description = """The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute
@@ -12,8 +16,8 @@ description = """The Genome Analysis Toolkit or GATK is a software package devel
 
 toolchain = {'name': 'dummy', 'version': ''}
 
-# download manually from http://www.broadinstitute.org/gatk/download and extract
-sources = ['GenomeAnalysisTK.jar']
+# download manually from https://software.broadinstitute.org/gatk/download/auth?package=GATK and extract
+sources = ['GenomeAnalysisTK-3.8-0.tar.bz2']
 
 dependencies = [('Java', '1.8.0_141')]
 

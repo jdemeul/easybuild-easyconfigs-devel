@@ -1,12 +1,14 @@
-# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
-# AffyMetrix Power Tools
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
 # Author: Jonas Demeulemeester
-# The Francis Crick Institute
+# The Francis Crick Institute, London, UK
+##
 
 easyblock = 'Tarball'
 
-name = 'apt'
-version = '1.20.5'
+name = 'APT'
+version = '2.10.0'
 
 homepage = 'http://www.affymetrix.com/estore/partners_programs/programs/developer/tools/powertools.affx'
 description = """ Affymetrix Power Tools (APT) are a set of cross-platform command line programs that
@@ -14,17 +16,16 @@ implement algorithms for analyzing and working with Affymetrix GeneChip® arrays
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
-source_urls = ['https://downloads.thermofisher.com/Affymetrix_Softwares/']
+source_urls = ['https://downloads.thermofisher.com/Affymetrix_Softwares/%(name)s_%(version)s/']
 sources = ['%(namelower)s-%(version)s-x86_64-intel-linux.zip']
 
-install_cmd = 'cd %(namelower)s-%(version)s-x86_64-intel-linux && cp * %(installdir)s'
 postinstallcmds = ['find %(installdir)s/bin/ -type f -not -name "*.*" -exec chmod +x {} \;']
 
-osdependencies = ['cppunit']
+# osdependencies = ['cppunit']
 
 sanity_check_paths = {
-    'files': ['bin/apt-probeset-genotype'],
-    'dirs': [],
+    'files': ["bin/apt-probeset-genotype", "bin/apt-probeset-summarize"],
+    'dirs': ["doc", "licenses"],
 }
 
 moduleclass = 'bio'

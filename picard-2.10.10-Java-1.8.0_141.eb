@@ -1,3 +1,7 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Jonas Demeulemeester
+# The Francis Crick Institute
+
 name = 'picard'
 version = '2.10.10'
 versionsuffix = '-Java-%(javaver)s'
@@ -13,6 +17,8 @@ source_urls = ['https://github.com/broadinstitute/picard/releases/download/%(ver
 sources = ['%(name)s.jar']
 
 dependencies = [('Java', '1.8.0_141')]
+
+postinstallcmds = ['chmod +r %(installdir)s/picard.jar']
 
 sanity_check_paths = {
     'files': ['picard.jar'],

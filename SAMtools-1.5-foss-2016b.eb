@@ -6,10 +6,8 @@
 # License::   MIT/GPL
 # $Id$
 #
-# Modified by: Adam Huffman, Jonas Demeulemeester
+# Modified for version 1.5 by Jonas Demeulemeester
 # The Francis Crick Institute
-#
-# Modified for version 1.4 by: Kurt Lust, UAntwerpen
 #
 ##
 name = 'SAMtools'

@@ -1,0 +1,96 @@
+# Built with EasyBuild version 3.4.0 on 2018-01-03_11-45-46
+# Built with EasyBuild version 3.3.1 on 2017-08-24_14-12-53
+easyblock = 'ConfigureMake'
+
+name = 'expat'
+version = "2.2.5"
+
+homepage = 'http://expat.sourceforge.net/'
+description = """Expat is an XML parser library written in C. It is a stream-oriented parser in which an application
+ registers handlers for things the parser might find in the XML document (like start tags)"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+sources = [SOURCELOWER_TAR_BZ2]
+source_urls = [SOURCEFORGE_SOURCE]
+
+moduleclass = 'tools'
+
+# Build statistics
+buildstats = [{
+    "build_time": 9.76,
+    "command_line": ["--installpath='/srv/sw/eb'", "--repositorypath='/srv/sw/eb/ebfiles/'", "--robot='/usr/easybuild/easyconfigs'", 'R-3.3.3-foss-2016b-X11-20160819.eb'],
+    "core_count": 20,
+    "cpu_model": "Intel Xeon E3-12xx v2 (Ivy Bridge)",
+    "cpu_speed": 2399.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.3.1",
+    "easybuild-framework_version": "3.3.1",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/srv/sw/eb/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/srv/sw/eb/software/GCCcore/5.4.0 --with-local-prefix=/srv/sw/eb/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/home/centos/.local/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.17",
+    "hostname": "vanloo-main",
+    "install_size": 984381,
+    "modules_tool": ('Lmod', '/usr/share/lmod/lmod/libexec/lmod', '6.5.1'),
+    "os_name": "centos linux",
+    "os_type": "Linux",
+    "os_version": "7.3.1611",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.5 (default, Nov  6 2016, 00:28:07) ; [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]",
+    "system_gcc_path": "/srv/sw/eb/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1503580373,
+    "total_memory": 402932,
+}]
+
+# Build statistics
+buildstats = [
+{
+    "build_time": 9.76,
+    "command_line": ["--installpath='/srv/sw/eb'", "--repositorypath='/srv/sw/eb/ebfiles/'", "--robot='/usr/easybuild/easyconfigs'", 'R-3.3.3-foss-2016b-X11-20160819.eb'],
+    "core_count": 20,
+    "cpu_model": "Intel Xeon E3-12xx v2 (Ivy Bridge)",
+    "cpu_speed": 2399.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.3.1",
+    "easybuild-framework_version": "3.3.1",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/srv/sw/eb/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/srv/sw/eb/software/GCCcore/5.4.0 --with-local-prefix=/srv/sw/eb/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/home/centos/.local/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.17",
+    "hostname": "vanloo-main",
+    "install_size": 984381,
+    "modules_tool": ('Lmod', '/usr/share/lmod/lmod/libexec/lmod', '6.5.1'),
+    "os_name": "centos linux",
+    "os_type": "Linux",
+    "os_version": "7.3.1611",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.5 (default, Nov  6 2016, 00:28:07) ; [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)]",
+    "system_gcc_path": "/srv/sw/eb/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1503580373,
+    "total_memory": 402932,
+},
+{
+    "build_time": 13.36,
+    "command_line": ["--installpath='/srv/sw/eb'", "--repositorypath='/srv/sw/eb/ebfiles/'", "--robot='/srv/sw/eb/ebfiles:/home/centos/easyconfigs:/usr/easybuild/easyconfigs'", "--robot-paths='/srv/sw/eb/ebfiles:/home/centos/easyconfigs:'", "--try-software-version='2.2.5'", 'expat-2.2.0-foss-2016b.eb'],
+    "core_count": 20,
+    "cpu_model": "Intel Xeon E3-12xx v2 (Ivy Bridge)",
+    "cpu_speed": 2399.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.4.0",
+    "easybuild-framework_version": "3.4.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/srv/sw/eb/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/srv/sw/eb/software/GCCcore/5.4.0 --with-local-prefix=/srv/sw/eb/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/home/centos/.local/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.17",
+    "hostname": "vanloo-main.novalocal",
+    "install_size": 1031529,
+    "modules_tool": ('Lmod', '/usr/share/lmod/lmod/libexec/lmod', '6.5.1'),
+    "os_name": "centos linux",
+    "os_type": "Linux",
+    "os_version": "7.4.1708",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.5 (default, Aug  4 2017, 00:39:18) ; [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]",
+    "system_gcc_path": "/srv/sw/eb/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/bin/python",
+    "timestamp": 1514979946,
+    "total_memory": 402932,
+},
+]

@@ -5,7 +5,7 @@
 easyblock = 'RPackage'
 
 name = 'Battenberg'
-version = '2.2.6'
+version = '2.2.7'
 
 homepage = 'https://github.com/Wedge-Oxford/battenberg'
 description = """Battenberg R package for subclonal copynumber estimation"""
