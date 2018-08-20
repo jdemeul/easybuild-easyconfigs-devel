@@ -1,0 +1,39 @@
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
+# Author: Jonas Demeulemeester
+# The Francis Crick Insitute, London, UK
+##
+
+easyblock = 'ConfigureMake'
+
+name = 'SvABA'
+version = '0.2.1-9813e84'
+
+homepage = "https://github.com/walaj/svaba"
+description = """SvABA - Structural variation and indel analysis by assembly.
+ Formerly known as "Snowman", SvABA, pronounced sah-bah, is a method for detecting
+ structural variants in sequencing data using genome-wide local assembly."""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+# no source_urls because the tarball has to be manually generated doing
+# git clone --recursive https://github.com/walaj/svaba
+# cd svaba
+# git reset --hard 9813e84 
+# cd ..
+# mv svaba svaba-0.2.1-9813e84
+# tar -czf svaba-0.2.1-9813e84.tar.gz svaba-0.2.1-9813e84
+sources = ['%(namelower)s-%(version)s.tar.gz']
+checksums = ['0561b263b5e58ee54f77b4860a9abdcbdee8c87e85a9145829a4274f879f72bf']
+
+postinstallcmds = ['mv %(builddir)s/%(namelower)s-%(version)s/bin/ %(installdir)s']
+
+dependencies = []
+
+sanity_check_paths = {
+    'files': ['bin/svaba'],
+    'dirs': []
+}
+
+moduleclass = 'bio'

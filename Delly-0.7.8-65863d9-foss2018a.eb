@@ -1,0 +1,51 @@
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
+# Author: Jonas Demeulemeester
+# The Francis Crick Insitute, London, UK
+##
+
+easyblock = 'MakeCp'
+
+name = 'Delly'
+version = '0.7.8-65863d9'
+
+homepage = 'https://github.com/dellytools/delly'
+description = """Delly is an integrated structural variant (SV) prediction
+ method that can discover, genotype and visualize deletions, tandem duplications,
+ inversions and translocations at single-nucleotide resolution in
+ short-read massively parallel sequencing data. """
+
+toolchain = {'name': 'foss', 'version': '2018a'}
+
+# no source_urls because the tarball has to be manually generated doing
+# git clone --recursive https://github.com/walaj/svaba
+# cd delly
+# git reset --hard 65863d9 
+# cd ..
+# mv delly delly-0.7.8-65863d9
+# tar -czf delly-0.7.8-65863d9.tar.gz delly-0.7.8-65863d9
+sources = ['%(namelower)s-%(version)s.tar.gz']
+checksums = ['54677fcb7cc501a460593b642fae9afa91a8fbed36e54445b86c9b5dbdaee9b0']
+
+dependencies = [
+    ('HTSlib', '1.9'),
+    ('Boost', '1.67.0', '-Python-2.7.14'),
+    ('XZ', '5.2.3'),
+]
+
+buildopts = 'PARALLEL=1 EBROOTHTSLIB=${EBROOTHTSLIB}'
+
+files_to_copy = [
+    (['src/delly'], 'bin'),
+    'LICENSE',
+    'README.md',
+]
+
+sanity_check_paths = {
+    'files': ['bin/delly'],
+    'dirs': [],
+}
+
+
+moduleclass = 'bio'
