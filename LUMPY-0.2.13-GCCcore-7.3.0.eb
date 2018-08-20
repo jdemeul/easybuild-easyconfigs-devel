@@ -1,0 +1,39 @@
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
+# Author: Jonas Demeulemeester
+# The Francis Crick Insitute, London, UK
+##
+easyblock = 'MakeCp'
+
+name = 'LUMPY'
+version = '0.2.13'
+
+homepage = 'https://github.com/arq5x/lumpy-sv/'
+
+description = """A probabilistic framework for structural variant discovery."""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+source_urls = ['https://github.com/arq5x/lumpy-sv/releases/download/%(version)s/']
+sources = ['%(namelower)s-sv-v%(version)s.tar.gz']
+checksums = ['1a7a5d18875b297acaa68ee1e864ca048654ebc85348920b518dc689d2b7a3cf']
+
+builddependencies = [
+    ('CMake', '3.12.1'),
+]
+
+dependencies = [
+    ('zlib', '1.2.11'),
+]
+
+prebuildopts = 'export ZLIB_PATH=$EBROOTZLIB/lib && '
+
+files_to_copy = [(['bin/*'], 'bin'), 'data', 'LICENSE']
+
+sanity_check_paths = {
+    'files': ['bin/lumpy', 'LICENSE'],
+    'dirs': ['data']
+}
+
+moduleclass = 'bio'
