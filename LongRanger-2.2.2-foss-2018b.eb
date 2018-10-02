@@ -1,0 +1,37 @@
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
+# Author: Jonas Demeulemeester
+# The Francis Crick Insitute, London, UK
+##
+
+easyblock = 'Tarball'
+
+name = 'LongRanger'
+version = '2.2.2'
+
+homepage = 'https://support.10xgenomics.com/genome-exome/software/pipelines/latest/what-is-long-ranger'
+description = """Long Ranger is a set of analysis pipelines that
+ processes Chromium sequencing output to align reads and call
+ and phase SNPs, indels, and structural variants. """
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+# manual download from https://support.10xgenomics.com/genome-exome/software/downloads/latest
+# extract, remove two dead links and package up again: 
+# longranger-2.2.2.orig/anaconda-cs/2.2.0-anaconda-cs-c8/lib/libtcl.so
+# longranger-2.2.2.orig/anaconda-cs/2.2.0-anaconda-cs-c8/lib/libtk.so
+# source_urls = ['https://github.com/dellytools/%(namelower)s/releases/download/v%(version)s/']
+sources = ['%(namelower)s-%(version)s.tar.gz']
+checksums = ['1a5b0303cde81ab907dea4c1842348ec69d2248a87d9253dc7b4bc6b419ad684']
+
+dependencies = [
+    ('bcl2fastq2', '2.20.0'),
+]
+
+sanity_check_paths = {
+    'files': ['longranger'],
+    'dirs': ['anaconda-cs', 'bcftools', 'bedtools', 'bwa', 'freebayes', 'longranger-cs', 'martian-cs', 'samtools_new', 'tiny-fastq', 'tiny-ref', 'vcflib'],
+}
+
+moduleclass = 'bio'
