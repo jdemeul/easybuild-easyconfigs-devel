@@ -36,7 +36,7 @@ checksums = ['5ab1fe396fe467682fbd763027067b94e02c931f78e388c90f4187c1219240e3']
 
 sanity_check_paths = {
     'files': ['product-info.mf'],
-    'dirs': ['bin', 'certs', 'docs', 'etc', 'share/man']
+    'dirs': ['bin', 'docs', 'etc', 'lib', 'share/man', 'var']
 }
 
 sanity_check_commands = ['ascp -h']
