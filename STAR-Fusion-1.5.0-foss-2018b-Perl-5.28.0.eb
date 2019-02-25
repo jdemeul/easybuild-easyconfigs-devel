@@ -22,7 +22,8 @@ checksums = ['229cbf7980496d72de0bfab5bde7148ff3111a99b72c6169d1a04120a52508b4']
 
 dependencies = [
     ('Perl', '5.28.0'),
-    ('STAR', '2.7.0d'),
+    ('DB', '18.1.25'),
+    ('STAR', '2.7.0d', '', ('foss', '2018b')),
 ]
 
 # these are the perl libraries dependencies
@@ -30,9 +31,14 @@ exts_defaultclass = 'PerlModule'
 exts_filter = ("perldoc -lm %(ext_name)s ", "")
 
 exts_list = [
+    ('ExtUtils::CppGuess', '0.12', {
+        'source_tmpl': 'ExtUtils-CppGuess-0.12.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETJ/'],
+        'checksums': ['31c47b5b15e3e9fd5ae7b35881a0fffd26a2983b241e7e3a1bc340d6d446186b'],
+    }),
     ('Set::IntervalTree', '0.12', {
         'source_tmpl': 'Set-IntervalTree-0.12.tar.gz',
-        'source_urls': ['https://cpan.metacpan.org/authors/id/B/BE/BENBOOTH/'],
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SL/SLOYD/'],
         'checksums': ['6fd4000e4022968e2ce5b83c07b189219ef1925ecb72977b52a6f7d76adbc349'],
     }),
     ('DB_File', '1.843', {
