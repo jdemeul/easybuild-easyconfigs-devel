@@ -33,32 +33,32 @@ exts_list = [
     ('Set::IntervalTree', '0.12', {
         'source_tmpl': 'Set-IntervalTree-0.12.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/B/BE/BENBOOTH/'],
-        'checksums' = ['6fd4000e4022968e2ce5b83c07b189219ef1925ecb72977b52a6f7d76adbc349'],
+        'checksums': ['6fd4000e4022968e2ce5b83c07b189219ef1925ecb72977b52a6f7d76adbc349'],
     }),
     ('DB_File', '1.843', {
         'source_tmpl': 'DB_File-1.843.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/P/PM/PMQS/'],
-        'checksums' = ['de24e3d1e56b1b56c1f143590fb8ab8b812ebd9697e9c01349b0ba11c36f346a'],
+        'checksums': ['de24e3d1e56b1b56c1f143590fb8ab8b812ebd9697e9c01349b0ba11c36f346a'],
     }),
     ('URI::Escape', '1.76', {
         'source_tmpl': 'URI-1.76.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/O/OA/OALDERS/'],
-        'checksums' = ['b2c98e1d50d6f572483ee538a6f4ccc8d9185f91f0073fd8af7390898254413e'],
+        'checksums': ['b2c98e1d50d6f572483ee538a6f4ccc8d9185f91f0073fd8af7390898254413e'],
     }),
     ('Carp::Assert', '0.21', {
         'source_tmpl': 'Carp-Assert-0.21.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/N/NE/NEILB/'],
-        'checksums' = ['924f8e2b4e3cb3d8b26246b5f9c07cdaa4b8800cef345fa0811d72930d73a54e'],
+        'checksums': ['924f8e2b4e3cb3d8b26246b5f9c07cdaa4b8800cef345fa0811d72930d73a54e'],
     }),
     ('JSON::XS', '4.01', {
         'source_tmpl': 'JSON-XS-4.01.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/'],
-        'checksums' = ['cc1062e39a1fd6ff8bd9df84a102e8572468cea29d43190672a10f9c39973e5c'],
+        'checksums': ['cc1062e39a1fd6ff8bd9df84a102e8572468cea29d43190672a10f9c39973e5c'],
     }),
     ('PerlIO::gzip', '0.20', {
         'source_tmpl': 'PerlIO-gzip-0.20.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/'],
-        'checksums' = ['4848679a3f201e3f3b0c5f6f9526e602af52923ffa471a2a3657db786bd3bdc5'],
+        'checksums': ['4848679a3f201e3f3b0c5f6f9526e602af52923ffa471a2a3657db786bd3bdc5'],
     }),
 ]
 
